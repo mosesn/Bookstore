@@ -102,7 +102,7 @@ def print_nodes(node):
 #O(n)
 #generates the numbers from 0 to n-1
 def gen_lst(n):
-    return [x for x in range(n)]
+    return [x for x in range(n)]*2
 
 def print_follow(node):
     cur_node = node
@@ -183,8 +183,8 @@ def sort(input_lst):
                 sort_lst[sorts].set_head(None)
 
         sorts += 1
-#    lsts = balance(sort_lst,sorts)
-#    print_ll(sort_lst)
+    lsts = balance(sort_lst,sorts)
+    print_ll(sort_lst)
 
 def bin_search(input_lst, elt, lower, upper):
     #if we want to speed this up a little, we can return a tuple
@@ -229,6 +229,8 @@ def bin_search(input_lst, elt, lower, upper):
             return (lower+upper)/2
 
 
+
+
 t1 = time.time()
 sort(randomize(gen_lst(100000)))
 t2 = time.time()
@@ -244,6 +246,8 @@ print str(t2-t1)
 print str(ratio)
 print str(float(diff1)/float(diff2))
 
+
+#sort(randomize(gen_lst(10)))
 
 #in_lst = [0,1,2,3,4,5,6,7,8,3]
 
